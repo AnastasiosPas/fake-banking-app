@@ -83,8 +83,26 @@
                 <div>
                     <div v-if="transactions2" class="transactions" >
                     <Transaction  @expand-transaction="expandTransaction" :date="transAccount2[0].bookDate" :amount="transAccount2[0].amount"/> 
-                    <Transaction  :date="transAccount2[1].bookDate" :amount="transAccount2[1].amount"/> 
-                    <Transaction  :date="transAccount2[2].bookDate" :amount="transAccount2[2].amount"/> 
+                        <TransactionList  v-if="transaction"  :transactionId="transAccount2[0].transactionId"
+                            :bookTime="transAccount2[0].transactionDateTime"
+                            :creditDebit="transAccount2[0].creditDebitIndicator"
+                            :counterpartyAccountNumber="transAccount2[0].counterpartyAccountNumber"
+                            :counterpartyName="transAccount2[0].counterpartyName"
+                            :description="transAccount2[0].description"  /> 
+                    <Transaction @expand-transaction="expandTransaction"  :date="transAccount2[1].bookDate" :amount="transAccount2[1].amount"/> 
+                        <TransactionList  v-if="transaction"  :transactionId="transAccount2[1].transactionId"
+                            :bookTime="transAccount2[1].transactionDateTime"
+                            :creditDebit="transAccount2[1].creditDebitIndicator"
+                            :counterpartyAccountNumber="transAccount2[1].counterpartyAccountNumber"
+                            :counterpartyName="transAccount2[1].counterpartyName"
+                            :description="transAccount2[1].description"  /> 
+                    <Transaction @expand-transaction="expandTransaction"  :date="transAccount2[2].bookDate" :amount="transAccount2[2].amount"/> 
+                        <TransactionList  v-if="transaction"  :transactionId="transAccount2[2].transactionId"
+                            :bookTime="transAccount2[2].transactionDateTime"
+                            :creditDebit="transAccount2[2].creditDebitIndicator"
+                            :counterpartyAccountNumber="transAccount2[2].counterpartyAccountNumber"
+                            :counterpartyName="transAccount2[2].counterpartyName"
+                            :description="transAccount2[2].description"  /> 
                     </div>
                 </div>
       </div>
@@ -105,8 +123,26 @@
                 <div>
                     <div v-if="transactions3" class="transactions">
                     <Transaction @expand-transaction="expandTransaction" :date="transAccount3[0].bookDate" :amount="transAccount3[0].amount"/> 
-                    <Transaction :date="transAccount3[1].bookDate" :amount="transAccount3[1].amount"/> 
-                    <Transaction :date="transAccount3[2].bookDate" :amount="transAccount3[2].amount"/> 
+                      <TransactionList  v-if="transaction"  :transactionId="transAccount3[0].transactionId"
+                            :bookTime="transAccount3[0].transactionDateTime"
+                            :creditDebit="transAccount3[0].creditDebitIndicator"
+                            :counterpartyAccountNumber="transAccount3[0].counterpartyAccountNumber"
+                            :counterpartyName="transAccount3[0].counterpartyName"
+                            :description="transAccount3[0].description"  /> 
+                    <Transaction @expand-transaction="expandTransaction" :date="transAccount3[1].bookDate" :amount="transAccount3[1].amount"/> 
+                      <TransactionList  v-if="transaction"  :transactionId="transAccount3[1].transactionId"
+                            :bookTime="transAccount3[1].transactionDateTime"
+                            :creditDebit="transAccount3[1].creditDebitIndicator"
+                            :counterpartyAccountNumber="transAccount3[1].counterpartyAccountNumber"
+                            :counterpartyName="transAccount3[1].counterpartyName"
+                            :description="transAccount3[1].description"  /> 
+                    <Transaction @expand-transaction="expandTransaction" :date="transAccount3[2].bookDate" :amount="transAccount3[2].amount"/> 
+                      <TransactionList  v-if="transaction"  :transactionId="transAccount3[2].transactionId"
+                            :bookTime="transAccount3[2].transactionDateTime"
+                            :creditDebit="transAccount3[2].creditDebitIndicator"
+                            :counterpartyAccountNumber="transAccount3[2].counterpartyAccountNumber"
+                            :counterpartyName="transAccount3[2].counterpartyName"
+                            :description="transAccount3[2].description"  /> 
                     </div>
                 </div>
       </div>

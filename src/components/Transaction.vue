@@ -1,6 +1,6 @@
 <template>
         <p @click="$emit('expand-transaction', trans)" class="transaction">
-            {{date}}:  €{{amount}}
+            {{date}}:  <strong>€{{amount}}</strong>
         </p>
 </template>
 
@@ -27,6 +27,7 @@ export default {
         margin-top: 5px;
         margin-bottom: 5px;
         cursor: pointer;
+        color: rgb(250, 236, 158)
     }
 
 </style>
