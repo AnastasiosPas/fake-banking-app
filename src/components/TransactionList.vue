@@ -1,4 +1,5 @@
 <template>
+
 <div @expand-transactions="expandTransactions" class="transaction">
      <p>Transaction ID: {{transactionId}}</p>
      <p>Book time: {{bookTime}}</p>

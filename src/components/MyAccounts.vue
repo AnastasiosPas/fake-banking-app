@@ -5,6 +5,7 @@
         <p  class="accountsbtn">Your fAkeBN-AMRO accounts:</p>
         <br/>
       <div class="grid">
+          
         <Account @click="viewAccountDetails1" 
                      :accountType="account[0].accounts[0].productName" 
                      :accountNumber="account[0].accounts[0].accountNumber" 
